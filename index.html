@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+ <head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="theme-color" content="#101513" />
+   <title>Rulebook | NFL Rules Desk</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+   <link rel="stylesheet" href="style.css" />
+ </head>
+ <body>
+   <div id="field-canvas" aria-hidden="true"></div>
+   <div class="app-shell">
+     <header class="topbar">
+       <a class="brand" href="#" aria-label="Rulebook home">
+         <span class="brand-mark">R</span>
+         <span>RULEBOOK<span class="brand-period">.</span></span>
+       </a>
+       <div class="topbar-meta"><span class="live-dot"></span> RULES DESK <span class="topbar-divider">/</span> NFL</div>
+       <button class="index-toggle" id="index-toggle" type="button" aria-label="Toggle rule index" title="Toggle rule index">
+         <span></span><span></span><span></span>
+       </button>
+     </header>
+
+
+     <div class="workspace">
+       <aside class="sidebar" id="sidebar">
+         <div class="sidebar-heading">
+           <span class="eyebrow">FIELD GUIDE</span>
+           <span class="rule-count"><span id="rule-count">0</span> RULES</span>
+         </div>
+         <label class="search-box" for="rule-search">
+           <span class="search-icon" aria-hidden="true">⌕</span>
+           <input id="rule-search" type="search" placeholder="Find a rule" autocomplete="off" />
+           <kbd>/</kbd>
+         </label>
+         <nav class="category-nav" id="category-nav" aria-label="Rule categories"></nav>
+         <div class="sidebar-note"><span class="note-mark">i</span><p>Rulebook answers are based on NFL rules. Other leagues can differ.</p></div>
+         <div class="sidebar-footer"><span>BUILT FOR THE GAME</span><span>2025–26</span></div>
+       </aside>
+
+
+       <main class="main-panel">
+         <div class="main-heading">
+           <div>
+             <span class="eyebrow">ASK THE RULEBOOK</span>
+             <h1>Football rules.<br /><span>No huddle required.</span></h1>
+           </div>
+           <div class="heading-badge"><span>01</span><i></i><span>PLAY</span></div>
+         </div>
+
+
+         <section class="chat-window" aria-label="Football rules conversation">
+           <div class="chat-toolbar">
+             <div><span class="live-dot"></span><span>RULES ASSISTANT</span></div>
+             <span class="chat-toolbar-right">NFL RULEBOOK <span>·</span> 2025</span>
+           </div>
+           <div class="messages" id="messages" aria-live="polite" aria-relevant="additions"></div>
+           <div class="suggestions" id="suggestions" aria-label="Suggested questions">
+             <button type="button" data-question="What counts as a catch?"><span>01</span> What counts as a catch?</button>
+             <button type="button" data-question="Explain downs and a first down"><span>02</span> How do downs work?</button>
+             <button type="button" data-question="What is pass interference?"><span>03</span> Pass interference?</button>
+             <button type="button" data-question="How does overtime work in the NFL?"><span>04</span> Overtime rules?</button>
+           </div>
+           <form class="composer" id="question-form">
+             <label class="sr-only" for="question-input">Ask a football rules question</label>
+             <span class="composer-prompt" aria-hidden="true">↳</span>
+             <input id="question-input" type="text" placeholder="Ask anything about NFL rules…" autocomplete="off" />
+             <button class="send-button" type="submit" aria-label="Send question" title="Send question"><span>ASK</span><b>↗</b></button>
+           </form>
+           <div class="composer-foot"><span>ANSWERS FROM THE RULEBOOK</span><span>ENTER TO SEND</span></div>
+         </section>
+         <footer class="main-footer"><span>NOT AN OFFICIAL NFL RESOURCE</span><span>KNOW THE RULES. OWN THE MOMENT.</span></footer>
+       </main>
+     </div>
+   </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/p5.min.js" defer></script>
+   <script src="app.js" defer></script>
+ </body>
+</html>
+
