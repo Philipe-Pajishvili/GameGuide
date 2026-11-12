@@ -157,7 +157,7 @@ function addMessage({ role, text, rules = [] }) {
  const now = new Date();
  const time = now.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
  const cards = rules.length ? `<div class="answer-list">${rules.map((rule) => `<section class="answer-card"><h3>${escapeHtml(rule.title)}</h3><p>${escapeHtml(rule.text)}</p><div class="answer-category">${escapeHtml(rule.category)}</div></section>`).join("")}</div>` : "";
- wrapper.innerHTML = `<div class="message-mark">${role === "assistant" ? "R" : "YOU"}</div><div class="message-content"><div class="message-meta"><span>${role === "assistant" ? "RULEBOOK" : "YOUR QUESTION"}</span><time>${time}</time></div><div class="message-text">${escapeHtml(text)}</div>${cards}</div>`;
+ wrapper.innerHTML = `<div class="message-mark">${role === "assistant" ? "G" : "YOU"}</div><div class="message-content"><div class="message-meta"><span>${role === "assistant" ? "RULEBOOK" : "YOUR QUESTION"}</span><time>${time}</time></div><div class="message-text">${escapeHtml(text)}</div>${cards}</div>`;
  messages.append(wrapper);
  messages.scrollTop = messages.scrollHeight;
 }
